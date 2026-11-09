@@ -1,0 +1,133 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #243b55;
+    margin-bottom: 10px;
+}
+
+.container > p:first-of-type {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    padding: 11px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #243b55;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #42658c;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#list {
+    list-style: none;
+}
+
+#list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f1f4f8;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+#list li span {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+#list li.done span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#list li button {
+    padding: 8px 10px;
+    font-size: 12px;
+}
+
+#count {
+    text-align: center;
+    margin: 20px 0;
+    color: #243b55;
+    font-weight: bold;
+}
+
+#clear {
+    display: block;
+    margin: auto;
+    background: #d9534f;
+}
+
+#clear:hover {
+    background: #b52b27;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+}
+.filters button.active {
+    background: #42658c;
+    font-weight: bold;
+}
